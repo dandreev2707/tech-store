@@ -1,0 +1,112 @@
+/* Общие стили заголовка */
+.header {
+  background: linear-gradient(90deg, #333, #444);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип */
+.logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ссылки навигации */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #555, #666);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Подсветка активных ссылок */
+.nav-links a.active {
+  color: #fff;
+  background: linear-gradient(90deg, #007bff, #0056b3); /* измените на ваши цвета */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* небольшой эффект увеличения */
+  font-weight: bold; /* делаем шрифт жирным для контраста */
+}
+
+/* Счётчик корзины */
+.cart-count {
+  background: radial-gradient(circle, #dc3545, #a71d2a);
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-count:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Стили формы поиска */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  width: 200px;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(90deg, #0056b3, #003a8c);
+  transform: scale(1.05);
+}

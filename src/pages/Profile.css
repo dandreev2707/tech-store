@@ -1,0 +1,177 @@
+.profile {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #0056b3;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.order-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.order-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 400px; /* Ограничение по высоте */
+  overflow-y: auto; /* Добавляем прокрутку */
+}
+
+
+.order-card-content {
+  display: flex;
+  flex-direction: column;
+}
+.order-card-content h3 {
+  margin-top: 0; /* Убираем верхний отступ */
+  margin-bottom: 10px; /* Небольшой отступ снизу */
+  text-align: center; /* По центру для баланса */
+}
+.order-owner,
+.order-total,
+.order-method,
+.order-address,
+.order-payment {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.order-items-list {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+.order-items-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.order-item {
+  margin: 0; /* Убираем отступ между товарами */
+  line-height: 1.5; /* Устанавливаем оптимальную высоту строки */
+}
+.no-orders-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.prev-button, .next-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.prev-button:disabled, .next-button:disabled {
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.prev-button:hover, .next-button:hover {
+  color: #0056b3;
+}
+.order-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.order-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #007bff;
+}
+.go-to-catalog-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-catalog-button:hover {
+  background-color: #0056b3;
+}

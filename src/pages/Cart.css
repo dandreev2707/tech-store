@@ -1,0 +1,112 @@
+.cart {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cart h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* расстояние между элементами */
+}
+
+.item-quantity button {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Анимация фона и преобразования */
+}
+
+.item-quantity button:disabled {
+  background-color: #e0e1e2;
+  cursor: not-allowed;
+}
+
+.item-quantity button:hover {
+  background-color: #e5e7eb; /* светлый серый на ховер */
+  transform: scale(1.05); /* Небольшое увеличение на ховер */
+}
+
+/* Установим фиксированную высоту и ширину для текста, чтобы избежать размытия */
+.item-quantity span {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  width: auto; /* Устанавливаем фиксированную ширину, чтобы избежать растягивания */
+}
+
+/* Кнопки "Удалить" и "Купить" */
+
+.remove-button,
+.purchase-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: none; 
+}
+
+.remove-button:hover,
+.purchase-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Небольшое увеличение на ховер */
+}
+
+/* Установим высоту и ширину фиксированным значением для текста кнопок */
+.remove-button, .purchase-button {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.purchase-button {
+  width: 100%;
+  margin-top: 20px;
+}
+.auth-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.auth-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: #0056b3;
+}

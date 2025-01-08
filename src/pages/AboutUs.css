@@ -1,0 +1,42 @@
+.about-us-page {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .about-us-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-us-header p {
+    font-size: 1.2rem;
+  }
+  
+  .about-us-content section {
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-content p, .about-us-content ul {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .about-us-content ul {
+    padding-left: 1.5rem;
+  }
+  
+  .about-us-content ul li {
+    margin-bottom: 0.5rem;
+  }
+  
