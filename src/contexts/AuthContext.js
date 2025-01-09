@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     );
     if (user) {
       setIsAuthenticated(true);
-      setUsername(user.username); // Сохраняем имя пользователя
+      setUsername(user.username); 
       return true;
     }
     return false;

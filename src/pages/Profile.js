@@ -9,7 +9,7 @@ function Profile() {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   const currentUser = users.find((user) => user.username === username);
   const orders = currentUser?.orders || [];
-  const favoriteProducts = currentUser?.favoriteProducts || []; // Получаем избранные товары
+  const favoriteProducts = currentUser?.favoriteProducts || []; 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNextOrder = () => {

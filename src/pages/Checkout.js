@@ -17,10 +17,16 @@ function Checkout() {
   const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate();
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const validateFields = () => {
     const newErrors = {};
     if (!name) newErrors.name = "Поле Имя обязательно для заполнения";
     if (!email) newErrors.email = "Поле Электронная почта обязательно для заполнения";
+    if (email && !isValidEmail(email)) newErrors.email = "Неверный формат электронной почты";
     if (!deliveryMethod) newErrors.deliveryMethod = "Выберите способ получения";
     if (deliveryMethod === "pickup" && !store) newErrors.store = "Выберите магазин для самовывоза";
     if (deliveryMethod === "delivery" && !address) newErrors.address = "Поле Адрес обязательно для заполнения";
@@ -56,7 +62,7 @@ function Checkout() {
       localStorage.setItem("users", JSON.stringify(updatedUsers));
 
       setSuccessMessage("Ваш заказ успешно оформлен!");
-      clearCart(); // Очищаем корзину
+      clearCart(); 
       setTimeout(() => navigate("/profile"), 2000);
     } else {
       setErrors(newErrors);
@@ -73,7 +79,7 @@ function Checkout() {
           value={deliveryMethod}
           onChange={(e) => {
             setDeliveryMethod(e.target.value);
-            setErrors((prevErrors) => ({ ...prevErrors, deliveryMethod: "" })); // Clear error on change
+            setErrors((prevErrors) => ({ ...prevErrors, deliveryMethod: "" })); 
           }}
           className={errors.deliveryMethod ? "input-error" : ""}
         >
@@ -91,7 +97,7 @@ function Checkout() {
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, name: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, name: "" })); 
               }}
               className={errors.name ? "input-error" : ""}
             />
@@ -103,7 +109,7 @@ function Checkout() {
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, email: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, email: "" })); 
               }}
               className={errors.email ? "input-error" : ""}
             />
@@ -113,7 +119,7 @@ function Checkout() {
               value={store}
               onChange={(e) => {
                 setStore(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, store: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, store: "" })); 
               }}
               className={errors.store ? "input-error" : ""}
             >
@@ -128,7 +134,7 @@ function Checkout() {
               value={paymentType}
               onChange={(e) => {
                 setPaymentType(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, paymentType: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, paymentType: "" })); 
               }}
               className={errors.paymentType ? "input-error" : ""}
             >
@@ -149,7 +155,7 @@ function Checkout() {
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, name: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, name: "" })); 
               }}
               className={errors.name ? "input-error" : ""}
             />
@@ -161,7 +167,7 @@ function Checkout() {
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, email: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, email: "" })); 
               }}
               className={errors.email ? "input-error" : ""}
             />
@@ -173,7 +179,7 @@ function Checkout() {
               value={address}
               onChange={(e) => {
                 setAddress(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, address: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, address: "" })); 
               }}
               className={errors.address ? "input-error" : ""}
             />
@@ -183,7 +189,7 @@ function Checkout() {
               value={paymentType}
               onChange={(e) => {
                 setPaymentType(e.target.value);
-                setErrors((prevErrors) => ({ ...prevErrors, paymentType: "" })); // Clear error on change
+                setErrors((prevErrors) => ({ ...prevErrors, paymentType: "" })); 
               }}
               className={errors.paymentType ? "input-error" : ""}
             >

@@ -1,9 +1,7 @@
 import React, { createContext, useReducer, useContext, useEffect } from "react";
 
-// Создаем контекст корзины
 export const CartContext = createContext();
 
-// Редуктор для управления корзиной
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM": {
@@ -11,7 +9,6 @@ const cartReducer = (state, action) => {
         (item) => item.id === action.payload.id
       );
       if (existingItemIndex !== -1) {
-        // Если товар уже есть, увеличиваем его количество
         const updatedItems = state.cartItems.map((item, index) =>
           index === existingItemIndex
             ? { ...item, quantity: item.quantity + 1 }
@@ -19,7 +16,6 @@ const cartReducer = (state, action) => {
         );
         return { ...state, cartItems: updatedItems };
       } else {
-        // Иначе добавляем новый товар
         return {
           ...state,
           cartItems: [...state.cartItems, { ...action.payload, quantity: 1 }],
@@ -49,9 +45,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-// Провайдер для CartContext
 export const CartProvider = ({ children }) => {
-  // Инициализация состояния из localStorage
   const storedCart = localStorage.getItem("cartItems");
   const initialState = {
     cartItems: storedCart ? JSON.parse(storedCart) : [],
@@ -59,7 +53,6 @@ export const CartProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  // Сохраняем данные корзины в localStorage при изменении state.cartItems
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
   }, [state.cartItems]);
@@ -95,5 +88,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Хук для использования CartContext
 export const useCart = () => useContext(CartContext);

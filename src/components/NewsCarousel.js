@@ -19,9 +19,9 @@ const NewsCarousel = () => {
   }, [newsItems]);
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 5000); // Автоматическое переключение каждые 5 секунд
-    return () => clearInterval(interval); // Очистка интервала при размонтировании компонента
-  }, [handleNext]); // Добавляем handleNext в зависимости
+    const interval = setInterval(handleNext, 5000); 
+    return () => clearInterval(interval);
+  }, [handleNext]); 
 
   return (
     <div className="carousel-container">

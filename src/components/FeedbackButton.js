@@ -1,4 +1,3 @@
-// FeedbackButton.js
 import React, { useState } from "react";
 import FeedbackModal from "./FeedbackModal";
 import "./FeedbackButton.css";

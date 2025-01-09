@@ -24,7 +24,7 @@
 .item-quantity {
   display: flex;
   align-items: center;
-  gap: 10px; /* расстояние между элементами */
+  gap: 10px; 
 }
 
 .item-quantity button {
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Анимация фона и преобразования */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; 
 }
 
 .item-quantity button:disabled {
@@ -45,20 +45,18 @@
 }
 
 .item-quantity button:hover {
-  background-color: #e5e7eb; /* светлый серый на ховер */
-  transform: scale(1.05); /* Небольшое увеличение на ховер */
+  background-color: #e5e7eb; 
+  transform: scale(1.05); 
 }
 
-/* Установим фиксированную высоту и ширину для текста, чтобы избежать размытия */
 .item-quantity span {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
   display: block;
-  width: auto; /* Устанавливаем фиксированную ширину, чтобы избежать растягивания */
+  width: auto; 
 }
 
-/* Кнопки "Удалить" и "Купить" */
 
 .remove-button,
 .purchase-button {
@@ -76,10 +74,9 @@
 .remove-button:hover,
 .purchase-button:hover {
   background-color: #0056b3;
-  transform: scale(1.05); /* Небольшое увеличение на ховер */
+  transform: scale(1.05); 
 }
 
-/* Установим высоту и ширину фиксированным значением для текста кнопок */
 .remove-button, .purchase-button {
   font-size: 16px;
   line-height: 1.5;

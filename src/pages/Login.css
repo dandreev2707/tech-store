@@ -1,10 +1,10 @@
 .login-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Чтобы форма была у самого верха страницы */
+    align-items: flex-start; 
     height: 100vh;
     background-color: #f5f5f5;
-    padding-top: 4rem; /* Отступ сверху для формы */
+    padding-top: 4rem; 
   }
   
   .login-form {
@@ -12,9 +12,9 @@
     padding: 4rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 450px; /* Увеличена ширина формы */
+    width: 450px; 
     text-align: center;
-    height: auto; /* Высота автоматически растянется */
+    height: auto; 
   }
   
   .login-form h1 {

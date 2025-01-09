@@ -66,23 +66,20 @@ const products = [
 ];
 
 function CategoryProducts() {
-  const { category } = useParams(); // Получаем slug категории из URL
-  const [sortOption, setSortOption] = useState("price"); // Состояние для выбора сортировки
-  const [priceRange, setPriceRange] = useState([0, 500000]); // Состояние для диапазона цен
-  const [favoriteProducts, setFavoriteProducts] = useState([]); // Состояние для избранных товаров
+  const { category } = useParams(); 
+  const [sortOption, setSortOption] = useState("price"); 
+  const [priceRange, setPriceRange] = useState([0, 500000]); 
+  const [favoriteProducts, setFavoriteProducts] = useState([]); 
 
-  // Загрузка избранных товаров из localStorage при загрузке страницы
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
     setFavoriteProducts(savedFavorites);
   }, []);
 
-  // Функция для сохранения избранных товаров в localStorage
   const saveFavoritesToLocalStorage = (favorites) => {
     localStorage.setItem("favoriteProducts", JSON.stringify(favorites));
   };
 
-  // Функция для добавления/удаления продукта из избранного
   const toggleFavorite = (productId) => {
     if (favoriteProducts.includes(productId)) {
       const updatedFavorites = favoriteProducts.filter((id) => id !== productId);
@@ -102,21 +99,20 @@ function CategoryProducts() {
       product.price <= priceRange[1]
   );
 
-  // Функция для сортировки продуктов
   const sortProducts = (option) => {
     if (option === "price") {
-      return filteredProducts.sort((a, b) => a.price - b.price); // Сортировка по цене (возрастание)
+      return filteredProducts.sort((a, b) => a.price - b.price); 
     } else if (option === "price-desc") {
-      return filteredProducts.sort((a, b) => b.price - a.price); // Сортировка по цене (убывание)
+      return filteredProducts.sort((a, b) => b.price - a.price); 
     } else if (option === "name") {
-      return filteredProducts.sort((a, b) => a.name.localeCompare(b.name)); // Сортировка по названию (алфавит)
+      return filteredProducts.sort((a, b) => a.name.localeCompare(b.name)); 
     } else if (option === "name-desc") {
-      return filteredProducts.sort((a, b) => b.name.localeCompare(a.name)); // Сортировка по названию (обратный алфавит)
+      return filteredProducts.sort((a, b) => b.name.localeCompare(a.name)); 
     }
     return filteredProducts;
   };
 
-  const sortedProducts = sortProducts(sortOption); // Применяем выбранную сортировку
+  const sortedProducts = sortProducts(sortOption); 
 
   return (
     <div className="category-products">

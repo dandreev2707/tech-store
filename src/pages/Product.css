@@ -1,13 +1,12 @@
-/* Product.css */
 
 :root {
-  --primary-color: #007BFF; /* Основной синий цвет */
-  --primary-color-hover: #0056b3; /* Цвет наводки для primary */
-  --secondary-color: #6c757d; /* Вторичный серый цвет */
-  --secondary-color-hover: #5a6268; /* Цвет наводки для secondary */
-  --border-color: #ddd; /* Цвет границы */
-  --box-shadow-color: rgba(0, 0, 0, 0.1); /* Цвет тени */
-  --border-radius: 8px; /* Радиус скругления */
+  --primary-color: #007BFF; 
+  --primary-color-hover: #0056b3; 
+  --secondary-color: #6c757d; 
+  --secondary-color-hover: #5a6268; 
+  --border-color: #ddd;
+  --box-shadow-color: rgba(0, 0, 0, 0.1); 
+  --border-radius: 8px; 
 }
 
 .product {
@@ -24,7 +23,7 @@
 .product p, 
 .product button {
   text-align: center;
-  width: 100%; /* чтобы элементы заполняли весь контейнер */
+  width: 100%; 
 }
 
 .product-detail {
@@ -133,7 +132,7 @@
 .similar-products {
   display: flex; 
   flex-wrap: wrap; 
-  justify-content: space-between; /* Распределение товаров по ряду по горизонтали */
+  justify-content: space-between; 
   gap: 1.5rem; 
   margin-top: 0; 
 }
@@ -168,11 +167,11 @@
   display: inline-block; 
   background-color: var(--primary-color); 
   color: white; 
-  padding: 10px 16px; /* Adjust padding to ensure uniform button size */
+  padding: 10px 16px; 
   border-radius: 4px; 
   text-decoration: none; 
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
-  width: 100%; /* Button takes full width */
+  width: 100%; 
   text-align: center; 
 }
 

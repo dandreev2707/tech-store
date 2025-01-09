@@ -75,3 +75,13 @@
 .success-message button:hover {
   background-color: #218838;
 }
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}

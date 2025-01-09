@@ -62,24 +62,22 @@ function Product() {
   const navigate = useNavigate();
   const product = products.find((p) => p.id === parseInt(id));
 
-  // Проверяем, находится ли товар в корзине
   useEffect(() => {
-    if (cartItems.some((item) => item.id === product?.id)) {
-      setIsInCart(true);
+    if (product) {
+      setIsInCart(cartItems.some((item) => item.id === product.id));
     }
-  }, [cartItems, product?.id]);
+  }, [cartItems, product]);
 
   const handleAddToCart = () => {
     if (product) {
       addToCart(product);
-      setIsInCart(true);
     }
   };
 
   useEffect(() => {
     if (product) {
       const storedProducts = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
-      const updatedProducts = [product, ...storedProducts.filter((p) => p.id !== product.id)].slice(0, 6); 
+      const updatedProducts = [product, ...storedProducts.filter((p) => p.id !== product.id)].slice(0, 6);
       localStorage.setItem("recentlyViewed", JSON.stringify(updatedProducts));
     }
   }, [product]);
@@ -117,7 +115,6 @@ function Product() {
               .map((relatedProduct) => (
                 <li key={relatedProduct.id}>
                   <Link to={`/product/${relatedProduct.id}`} className="view-details">
-
                     {relatedProduct.name}
                   </Link>
                 </li>

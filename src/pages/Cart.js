@@ -15,7 +15,7 @@ function Cart() {
       console.log('Navigating to /checkout');
       navigate('/checkout');
     } else {
-      setShowAuthMessage(true); // Показываем уведомление
+      setShowAuthMessage(true); 
     }
   };
 
